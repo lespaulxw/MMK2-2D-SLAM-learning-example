@@ -38,17 +38,6 @@ python scripts/setup_submodules.py
 | 机械臂模仿学习 | `pip install -e ".[act_full]"` | 机器人技能学习 |
 | 高保真渲染 | `pip install -e ".[gs]"` | 视觉仿真、Real2Sim |
 
-### Docker 快速开始
-
-```bash
-docker build -f discoverse/docker/Dockerfile -t discoverse:latest .
-docker run -dit --rm --name discoverse --gpus all \
-    -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix discoverse:latest
-xhost +local:docker && docker exec -it discoverse bash
-```
-
-预构建镜像（v1.8.6）：[百度网盘](https://pan.baidu.com/s/1mLC3Hz-m78Y6qFhurwb8VQ?pwd=xmp9)
-
 ## 🗺️ MMK2 2D SLAM 学习例程
 
 基于 MuJoCo-LiDAR 和 DISCOVERSE 仿真平台的完整 2D SLAM 学习例程。*（由 [lesapulxw](https://github.com/lesapulxw) 贡献）*
@@ -85,13 +74,6 @@ python run_map_then_nav.py --no-ros
 | `run_map_then_nav.py` | 两阶段：键盘建图 → 点击地图设置目标自主导航 |
 
 完整文档请参见 [examples/MMK2_SLAM/README.md](examples/MMK2_SLAM/README.md)。
-
-## ⏩ 最近更新
-
-- **2025.02.19**：📡 添加点云传感器支持
-- **2025.02.17**：📈 集成 Diffusion Policy 基线
-- **2025.01.16**：🐳 添加 Docker 支持
-- **2025.01.13**：🎉 DISCOVERSE 开源发布
 
 ## ❔ 故障排除
 

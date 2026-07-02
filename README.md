@@ -40,17 +40,6 @@ python scripts/setup_submodules.py
 | Imitation Learning | `pip install -e ".[act_full]"` | Robot skill learning |
 | High-Fidelity Rendering | `pip install -e ".[gs]"` | Visual simulation, Real2Sim |
 
-### Docker Quick Start
-
-```bash
-docker build -f discoverse/docker/Dockerfile -t discoverse:latest .
-docker run -dit --rm --name discoverse --gpus all \
-    -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix discoverse:latest
-xhost +local:docker && docker exec -it discoverse bash
-```
-
-Pre-built image (v1.8.6): [Baidu Netdisk](https://pan.baidu.com/s/1mLC3Hz-m78Y6qFhurwb8VQ?pwd=xmp9)
-
 ## 🗺️ MMK2 2D SLAM Learning Example
 
 A complete 2D SLAM learning routine for the MMK2 robot, built on MuJoCo-LiDAR and DISCOVERSE simulation platform. *(Contributed by [lesapulxw](https://github.com/lesapulxw))*
@@ -87,13 +76,6 @@ python run_map_then_nav.py --no-ros
 | `run_map_then_nav.py` | Two-phase: keyboard mapping → click-to-navigate |
 
 See [examples/MMK2_SLAM/README.md](examples/MMK2_SLAM/README.md) for full documentation.
-
-## ⏩ Recent Updates
-
-- **2025.02.19**: 📡 Point cloud sensor support added
-- **2025.02.17**: 📈 Diffusion Policy baseline integration
-- **2025.01.16**: 🐳 Docker support added
-- **2025.01.13**: 🎉 DISCOVERSE open source release
 
 ## ❔ Troubleshooting
 
